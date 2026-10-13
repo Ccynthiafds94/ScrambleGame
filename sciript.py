@@ -213,3 +213,69 @@
     
 # winners.append(name)
 # print(f"Winner: {name}")
+
+
+#------------------------------------------------------------------------
+# 8. Example for functions in Python
+# Challenge: Write some functions!
+# You've very generously decided to pick up coffee for six of your favorite coworkers this morning. 
+
+# 1. Write a function announcing your coffee run. 
+# Example output: "I am headed to the coffee shop! Who wants a latte?"
+
+# 2. Write a function to calculate the total cost if you buy them each a latte for $5. In an f string, print how many lattes and what the total comes to.  
+# Example output: 
+# 6 lattes comes to $30.
+
+# 3. Your coworkers thank you profusely. To save a little time, write a function that prints "You're welcome!" twice, then call it as many times as you need to thank all six coworkers.
+# def thank_coworkers():
+#     for _ in range(1):
+#         print("I am headed to the coffee shop! Who wants a latte?")
+
+# thank_coworkers()
+
+# def calculate_total_cost(num_lattes):
+#     cost_per_latte = 5
+#     total_cost = num_lattes * cost_per_latte
+#     print(f"{num_lattes} lattes comes to ${total_cost}.")
+
+# calculate_total_cost(6)
+
+# Challenge: Write two functions with parameters
+# Write each function underneath its instructions, then call it with the values given.
+
+# 1. Write a function called add_numbers that prints the sum of the two numbers you pass in.
+#    Call it a couple of times with different numbers.
+#    Example output:
+#    add_numbers(2, 3) prints 5
+#    add_numbers(10, 45) prints 55
+
+
+# 2. You've scrambled a word before: turn it into a list of letters, shuffle them, and
+#    join them back together. Let's make that reusable. Write scramble(word) so it takes
+#    any word and prints a scrambled version of it.
+#    Example output:
+#    scramble("python") might print nohtyp
+
+# import random
+
+# def add_numbers(num1, num2):
+#     print(num1 + num2)
+
+# input1 = int(input("Enter first number: "))
+# input2 = int(input("Enter second number: "))
+# add_numbers(input1, input2)
+
+# def scramble(word):
+#     letters = list(word)
+#     random.shuffle(letters)
+#     scrambled_word = "".join(letters)
+#     print(scrambled_word)
+
+# scramble("python")
+# o/p
+# PS C:\Users\asus\Desktop\Learnings\python\PythonLearning> python sciript.py
+# Enter first number: 7
+# Enter second number: 8
+# 15
+# nhoytp
