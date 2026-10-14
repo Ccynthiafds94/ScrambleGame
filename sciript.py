@@ -279,3 +279,84 @@
 # Enter second number: 8
 # 15
 # nhoytp
+
+
+# Challenge: Returning functions 
+# For each function, save the result to a variable, then use the result to print an f string.
+
+# 1. Write room_area(length, width) that returns the area of a room. Get the area of a
+#    12 by 10 room.
+#    Example output:
+#    The room is 120 square feet.
+
+# 2. Write add_tax(price) that returns a price with 8% tax added (multiply by 1.08). Get
+#    the total for a $50 item.
+#    Example output:
+#    With tax, that comes to $54.0.
+
+# 3. Write full_name(first, last) that returns a first and last name joined with a space.
+#    Use it to build a name, then print a greeting with it.
+#    Example output:
+#    Welcome, Mike Reed!
+
+# def room_area(length, width):
+#     return length * width
+
+# def add_tax(price):
+#     return price * 1.08
+
+# def full_name(first, last):
+#     return f"{first} {last}"
+
+# print(f"The room is {room_area(12, 10)} square feet.")
+# print(f"With tax, that comes to ${add_tax(50)}.")   
+# print(f"Welcome, {full_name('Mike', 'Reed')}!")
+
+#------------------------------------------------------------------------
+# 9. Example for the For loop in Python
+
+# Challenge: Award Night!
+# It's awards night, and here are the nominees for Best New App. The list can grow or
+# shrink year to year, so your program shouldn't care how many names are on it.
+
+# nominees = ["PixelPal", "TaskTanic", "SnackMap", "MoodTunes"]
+
+# 1. Loop over the nominees and print each one on its own line, formatted like the
+#    example below so it reads like a real program.
+#    Each line should look like:
+#    Nominated for Best New App: PixelPal
+
+# for nominee in nominees:
+#     print(f"Nominated for Best New App: {nominee}")
+
+# 2. After the loop, print one closing line: "And those are your nominees!"
+#    It should print just once, after all the names.
+
+# print("And those are your nominees!")
+
+# Challenge: Festival Lineup
+# Each act in this festival lineup is a tuple: the band, their genre, and how many
+# minutes they play.
+
+lineup = [
+    ("The Wailers", "reggae", 45),
+    ("Daft Punk", "electronic", 90),
+    ("Adele", "pop", 60),
+    ("Metallica", "metal", 100),
+]
+
+# Loop over the lineup, unpacking each act into band, genre, and minutes. Use if/else to
+# print a "long set" line for any act playing 90 minutes or more, and a normal line for
+# the rest:
+#    The Wailers (reggae) plays 45 minutes
+#    Daft Punk (electronic) plays a long set: 90 minutes
+#    Adele (pop) plays 60 minutes
+#    Metallica (metal) plays a long set: 100 minutes
+
+for band, genre, minutes in lineup:
+    if minutes >= 90:
+        print(f"{band} ({genre}) plays a long set: {minutes} minutes")
+    else:
+        print(f"{band} ({genre}) plays {minutes} minutes")
+        
+print("And that's the festival lineup!")
