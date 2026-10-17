@@ -1,15 +1,30 @@
+# Challenge: Validate User Input
+
+# When trying to move a singer to the top of the queue, the app will crash if the user enters input that can't be converted to an integer. Use try/except to handle the error.
+
+# Expected output:
+
+# > top
+# Who do you want to move to the top? Enter a number: two
+
+# Please enter a number.
+
+# > top
+# Who do you want to move to the top? Enter a number: 2
+
+# Moved Allen to the top of the queue!
 queue = [("Annie", "Dancing Queen"), ("Allen", "Country Roads")]
 
 # prompt for singer
 
-def prompt_for_singer():
-    if len(queue) < 2:
-        print("You need at least two singers in the queue to move someone to the top.")
-        return "", ""
-    """Prompt the host for a singer's name and song."""
-    name = input("Enter the singer's name: ").strip().title()
-    song = input("Enter the song: ").strip().title()
-    return name, song
+def prompt_for_singer(): 
+        if len(queue) < 2:
+            print("You need at least two singers in the queue to move someone to the top.")
+            return "", ""
+        """Prompt the host for a singer's name and song."""
+        name = input("Enter the singer's name: ").strip().title()
+        song = input("Enter the song: ").strip().title()
+        return name, song
 
 def add_singer(queue):
     name, song = prompt_for_singer()
@@ -37,6 +52,12 @@ def remove_singer(queue):
     print(f"There's no one named {name} in the queue.")
 
 def move_to_top(queue):
+    try:
+        position = int(input("Who do you want to move to the top? Enter a number: ")) - 1
+    except ValueError:
+        print()
+        print("Please enter a number.")
+        return
     if len(queue) == 0:
         print("Oops! There's no one left to move!")
         return

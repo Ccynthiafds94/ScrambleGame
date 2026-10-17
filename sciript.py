@@ -338,12 +338,12 @@
 # Each act in this festival lineup is a tuple: the band, their genre, and how many
 # minutes they play.
 
-lineup = [
-    ("The Wailers", "reggae", 45),
-    ("Daft Punk", "electronic", 90),
-    ("Adele", "pop", 60),
-    ("Metallica", "metal", 100),
-]
+# lineup = [
+#     ("The Wailers", "reggae", 45),
+#     ("Daft Punk", "electronic", 90),
+#     ("Adele", "pop", 60),
+#     ("Metallica", "metal", 100),
+# ]
 
 # Loop over the lineup, unpacking each act into band, genre, and minutes. Use if/else to
 # print a "long set" line for any act playing 90 minutes or more, and a normal line for
@@ -353,10 +353,40 @@ lineup = [
 #    Adele (pop) plays 60 minutes
 #    Metallica (metal) plays a long set: 100 minutes
 
-for band, genre, minutes in lineup:
-    if minutes >= 90:
-        print(f"{band} ({genre}) plays a long set: {minutes} minutes")
-    else:
-        print(f"{band} ({genre}) plays {minutes} minutes")
+# for band, genre, minutes in lineup:
+#     if minutes >= 90:
+#         print(f"{band} ({genre}) plays a long set: {minutes} minutes")
+#     else:
+#         print(f"{band} ({genre}) plays {minutes} minutes")
         
-print("And that's the festival lineup!")
+# print("And that's the festival lineup!")
+
+#------------------------------------------------------------------------
+# 10. Example for the try/except statement in Python
+
+# Challenge: Hot Dog Contest
+# You're building a signup for a hot dog eating contest. Entrants type how many
+# hot dogs they think they can eat, but nothing stops them from typing something
+# that isn't a number.
+
+# 1. Ask the entrant how many hot dogs they can eat and convert the answer to an int.
+# 2. If the answer isn't a whole number, print "I need a number to sign you up."
+# 3. If the answer is a whole number, print "Signed up for {count} hot dogs. Good luck!"
+
+# Here's what your output should look like:
+#
+# How many hot dogs can you eat? 7
+# Signed up for 7 hot dogs. Good luck!
+#
+# How many hot dogs can you eat? a lot
+# I need a number to sign you up.
+
+# age = input("How many hot dogs can you eat? ")
+# try:
+#     count = int(age)
+#     print(f"Signed up for {count} hot dogs. Good luck!")
+# except ValueError:
+#     print("I need a number to sign you up.")
+    
+# print()
+# print("End of program.")
